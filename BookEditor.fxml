@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CAWPILEGui">
+   <children>
+      <TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <content>
+            <Accordion>
+              <panes>
+                <TitledPane animated="false" text="Book Information">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="15.0" layoutY="14.0" text="Title: " />
+                              <TextField fx:id="title" promptText="book title" layoutX="50.0" layoutY="10.0" prefHeight="29.0" prefWidth="238.0" />
+                              
+                              <Label layoutX="330.0" layoutY="14.0" text="Author:" />
+                              <TextField fx:id="author" promptText="author's name" layoutX="375.0" layoutY="10.0" prefHeight="29.0" prefWidth="191.0" />
+                              
+                              <Label layoutX="14.0" layoutY="52.0" text="Publication Year:" />
+                              <TextField fx:id="publicationYear" layoutX="109.0" layoutY="44.0" prefHeight="29.0" prefWidth="50.0" />
+                              
+                              <Label layoutX="300.0" layoutY="50.0" text="Main Genre:" />
+                              <ChoiceBox fx:id="mainGenre" layoutX="375.0" layoutY="45.0" prefHeight="29.0" prefWidth="150.0" />
+                              
+                              <Label layoutX="265.0" layoutY="90.0" text="Notable Sub-Genre:" />
+                              <TextField fx:id="subGenre" layoutX="375.0" layoutY="85.0" prefHeight="29.0" prefWidth="150.0" />
+                              
+                              <Label layoutX="15.0" layoutY="93.0" text="Book Length:" />
+                              <ChoiceBox fx:id="length" layoutX="95.0" layoutY="90.0" prefHeight="29.0" prefWidth="95.0" />
+                              
+                              <Label layoutX="15.0" layoutY="130.0" text="Age Category:" />
+                              <ChoiceBox fx:id="ageCategory" layoutX="95.0" layoutY="125.0" prefHeight="29.0" prefWidth="115.0" />
+                              
+                              <Label layoutX="265.0" layoutY="130.0" text="Series?:" />
+                              <ChoiceBox fx:id="series" layoutX="305.0" layoutY="125.0" prefHeight="29.0" prefWidth="115.0" />
+                              
+                              <CheckBox fx:id="lastInSeries" layoutX="430.0" layoutY="125.0" mnemonicParsing="false" text="Last in Series?" />
+                              
+                              <CheckBox fx:id="poc" layoutX="25.0" layoutY="160.0" mnemonicParsing="false" text="Author POC?" />
+                              
+                              <Label layoutX="15.0" layoutY="195.0" text="Written By:" />
+                              <ChoiceBox fx:id="writtenBy" layoutX="85.0" layoutY="190.0" prefHeight="29.0" prefWidth="115.0" />
+                              
+                              <Label layoutX="15.0" layoutY="235.0" text="Author Nationality:" />
+                              <TextField fx:id="nationality" promptText="ex. USA" layoutX="120.0" layoutY="230.0" prefHeight="29.0" prefWidth="100.0" />
+                              
+                              <CheckBox fx:id="lgbtq" layoutX="305.0" layoutY="160.0" mnemonicParsing="false" text="LGBTQ+ Rep?" />
+                              
+                              <Label layoutX="305.0" layoutY="195.0" text="Specifically:" />
+                              <TextField fx:id="lgbtSpecifics" layoutX="370.0" layoutY="190.0" prefHeight="29.0" prefWidth="189.0" />
+                              
+                              <CheckBox fx:id="ownVoices" layoutX="305.0" layoutY="230.0" mnemonicParsing="false" text="Own Voices?" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Ratings">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="20.0" text="Characters:" />
+                              <ChoiceBox fx:id="characters" layoutX="88.0" layoutY="15.0" prefHeight="29.0" prefWidth="32.0" />
+                              
+                              <Label layoutX="14.0" layoutY="57.0" text="Atmosphere:" />
+                              <ChoiceBox fx:id="atmosphere" layoutX="88.0" layoutY="52.0" prefHeight="29.0" prefWidth="32.0" />
+                              
+                              <Label layoutX="14.0" layoutY="94.0" text="Writing:" />
+                              <ChoiceBox fx:id="writing" layoutX="88.0" layoutY="89.0" prefHeight="29.0" prefWidth="32.0" />
+                              
+                              <Label layoutX="14.0" layoutY="128.0" text="Plot:" />
+                              <ChoiceBox fx:id="plot" layoutX="88.0" layoutY="123.0" prefHeight="29.0" prefWidth="32.0" />
+                              
+                              <Label layoutX="14.0" layoutY="163.0" text="Intrigue" />
+                              <ChoiceBox fx:id="intrigue" layoutX="88.0" layoutY="158.0" prefHeight="29.0" prefWidth="32.0" />
+                              
+                              <Label layoutX="14.0" layoutY="198.0" text="Logic:" />
+                              <ChoiceBox fx:id="logic" layoutX="88.0" layoutY="193.0" prefHeight="29.0" prefWidth="32.0" />
+                              
+                              <Label layoutX="14.0" layoutY="235.0" text="Enjoyment:" />
+                              <ChoiceBox fx:id="enjoyment" layoutX="88.0" layoutY="230.0" prefHeight="29.0" prefWidth="32.0" />
+                              
+                              <Label fx:id="rating" layoutX="328.0" layoutY="36.0" text="Rating:">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Read-Through Information">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="20.0" layoutY="30.0" text="Start Date:" />
+                              <DatePicker fx:id="startDate" layoutX="110.0" layoutY="25.0" />
+                              
+                              <Label layoutX="20.0" layoutY="75.0" text="Finish Date:" />
+                              <DatePicker fx:id="finishDate" layoutX="110.0" layoutY="70.0" />
+                              
+                              <Label layoutX="20.0" layoutY="165.0" text="Format Read in:" />
+                              <ChoiceBox fx:id="format" layoutX="110.0" layoutY="160.0" prefWidth="150.0" />
+                              
+                              <Label layoutX="20.0" layoutY="120.0" text="Language Read:" />
+                              <TextField fx:id="language" promptText="ex. English" layoutX="110.0" layoutY="115.0" prefHeight="29.0" prefWidth="195.0" />
+                              
+                              <CheckBox fx:id="reRead" layoutX="400.0" layoutY="25.0" mnemonicParsing="false" text="Re-Read?" />
+                              <CheckBox fx:id="dnf" layoutX="400.0" layoutY="70.0" mnemonicParsing="false" text="DNF?" />
+                              
+                              <Label layoutX="325.0" layoutY="120.0" text="DNF Reason:" />
+                              <TextField fx:id="dnfReason" promptText="Reason for not Finishing" layoutX="400.0" layoutY="115.0" prefHeight="29.0" prefWidth="181.0" />
+                              
+                              <Label layoutX="20.0" layoutY="210.0" text="Pages Read:" />
+                              <TextField fx:id="pagesRead" promptText="# of Pages Read" layoutX="110.0" layoutY="205.0" prefHeight="29.0" prefWidth="80.0" />
+                              
+                              <Label layoutX="325.0" layoutY="165.0" text="Ownership:" />
+                              <ChoiceBox fx:id="ownership" layoutX="400.0" layoutY="160.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+         </content>
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <Label fx:id="bookEditorTitle" text="Book Title:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </graphic>
+      </TitledPane>
+      <AnchorPane prefHeight="35.0" prefWidth="200.0" VBox.vgrow="NEVER">
+         <children>
+            <Button layoutX="300.0" layoutY="5.0" mnemonicParsing="false" text="Save Book" onAction="#saveBook" />
+            <Button layoutX="378.0" layoutY="5.0" mnemonicParsing="false" text="Copy To ClipBoard" onAction="#copy" />
+            <Button layoutX="500.0" layoutY="5.0" mnemonicParsing="false" text="Close" onAction="#cancelEditor" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

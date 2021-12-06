@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox prefHeight="350" prefWidth="500" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CAWPILEGui">
+	<children>
+		<MenuBar VBox.vgrow="NEVER">
+			<menus>
+				<Menu text="File">
+					<items>
+						<MenuItem onAction="#open" text="Open">
+							 <graphic>
+								<ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true">
+									 <image>
+										<Image url="@open-iconic-master/png/folder-2x.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</MenuItem>
+						<MenuItem onAction="#exit" text="Quit">
+							<graphic>
+								<ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@open-iconic-master/png/x-2x.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</MenuItem>
+					</items>
+				</Menu>
+				<Menu text="Help">
+					<items>
+						<MenuItem onAction="#browser" text="Help">
+							<graphic>
+								<ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@open-iconic-master/png/question-mark-2x.png" />
+									</image>
+									</ImageView>
+							</graphic>
+						</MenuItem>
+						<MenuItem onAction="#info" text="About">
+							<graphic>
+								<ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@open-iconic-master/png/info-2x.png" />
+										</image>
+									</ImageView>
+							</graphic>
+						</MenuItem>
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+		<AnchorPane maxHeight="-1" maxWidth="-1" prefHeight="-1" prefWidth="-1" VBox.vgrow="NEVER">
+			<children>
+				<ListView fx:id="bookListView" prefHeight="400" prefWidth="500">
+				</ListView>
+				<Button fx:id="EditBookButton" layoutX="40" layoutY="400" mnemonicParsing="false" onAction="#editBook" text="Edit Selected Book" />
+				<Button fx:id="newBookButton" layoutX="190" layoutY="400" mnemonicParsing="false" onAction="#newBook" text="Add New Book" />
+				<Button fx:id="saveListButton" layoutX="320" layoutY="400" mnemonicParsing="false" onAction="#saveToCSV" text="Save Current List as CSV" />
+				<TextFlow focusTraversable="true" layoutX="25" layoutY="425">
+					<children>	<!-- https://stackoverflow.com/questions/15977295/control-for-displaying-multiline-text -->
+						<Text text="Thank you for using Version 1 of the CAWPILE GUI.&#13;To begin, use the File -> open option to open a saved CAWPILE CSV.&#13;Further information can be found at the youtube video hyperlinked below:&#13;" />
+						<Hyperlink onAction="#hyper" text="Book Rating Spreadsheet: CAWPILE V.2 [CC]| Book Roast via Book Roast" />
+					</children>
+				</TextFlow>
+			</children>
+		</AnchorPane>
+	</children>
+</VBox>
